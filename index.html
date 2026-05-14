@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- head
+    Purpose:
+    - Title used here shows up in the browser tab
+    - Link to the favicon (small image that appears in the browser tab)
+    - Link to the CSS file (used to style the webpage)
+    When To Modify:
+    - [ ] Project 2 (REQUIRED FEATURE)
+    - [ ] Project 2 (STRETCH FEATURE) (favicon)
+    - [ ] Any time after
+    -->
+    <title>Boca Lax Showdown - Youth Lacrosse Tournament</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- navbar [PLACEHOLDER] [ADDED IN UNIT 4] -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#rsvp">RSVP</a></li>
+        </ul>
+        <div class="navbar-buttons">
+            <button id="theme-button">🌙 Dark Mode</button>
+            <button id="reduce-motion-button">Reduce Motion</button>
+        </div>
+    </div>
+
+    <!-- headings
+    Purpose:
+    - Main header section of the webpage
+    - Contains the title, subtitle, image, and key buttons for the webpage
+    When To Modify:
+    - [ ] Project 2 (REQUIRED FEATURE)
+    - [ ] Project 3 (REQUIRED FEATURE)
+    - [ ] Project 4 (REQUIRED FEATURE)
+    - [ ] Any time after
+    -->
+    <div class="header">
+        <div id="header-left">
+            <img src="./img/bocalaxshowdown.jpg" id="header-img" alt="Boca Lax Showdown tournament logo" />
+        </div>
+        <div id="header-right">
+            <h1>Boca Lax Showdown</h1>
+            <h2>South Florida's Premier Youth Lacrosse Tournament – June 15-16, 2026</h2>
+            <button type="button" class="header-button">Register Your Team</button>
+            <button type="button" class="header-button">View Schedule & Brackets</button>
+        </div>
+    </div>
+    
+    <!-- Countdown Timer -->
+    <div id="countdown" class="revealable" style="text-align: center; margin: 30px 0; padding: 20px; background-color: #e6f2ff; border-radius: 12px;">
+        <h3 style="color: #006600; margin-bottom: 10px;">Event Starts In:</h3>
+        <div id="timer" style="font-size: 2.2rem; font-weight: bold; color: #004080; letter-spacing: 4px;">
+            Loading...
+        </div>
+    </div>
+
+    <!-- about
+    Purpose:
+    - Section for general info about the event
+    - Contains a video, description, and key points about the event
+    When To Modify:
+    - [ ] Project 2 (REQUIRED FEATURE)
+    - [ ] Project 2 (STRETCH FEATURE)
+    - [ ] Project 4 (STRETCH FEATURE)
+    - [ ] Any time between / after
+    -->
+    <div id="about" class="revealable">
+        <h2>About the Event</h2>
+        <p>The Boca Lax Showdown is an exciting weekend youth lacrosse tournament held at Patch Reef Park in Boca Raton, Florida! Open to boys and girls teams in U12 to U18 divisions, it features competitive bracket play, skills challenges, MVP awards, and a fun post-tournament celebration with food trucks, music, and raffles.</p>
+        <p>Whether you're a player, coach, parent, or fan, come join the action. It's family-friendly, supports growing lacrosse in South Florida, and raises funds for local youth programs. No experience needed to spectate — just bring your team spirit!</p>
+        <h3>What to Expect</h3>
+        <h4>Get Ready for Non-Stop Lacrosse Action!</h4>
+        <ul>
+            <li><b>Competitive Games:</b> <i>Bracket-style play with top local teams battling it out</i></li>
+            <li><b>Skills Contests:</b> <i>Fastest shot, accuracy challenge, and more for prizes</i></li>
+            <li><b>Family Fun:</b> <i>Food trucks, music, spectator seating, and post-event party</i></li>
+        </ul>
+    </div>
+
+    <!-- schedule
+    Purpose:
+    - Section for specific info about the event's schedule
+    - Contains images and descriptions of each activity
+    When To Modify:
+    - [ ] Project 2 (REQUIRED FEATURE)
+    - [ ] Project 4 (STRETCH FEATURE)
+    - [ ] Any time between / after
+    -->
+    <div id="schedule" class="revealable">
+        <h2>Event Schedule</h2>
+        <img src="./img/laxactionshotgirls.jpg" alt="Youth lacrosse player taking a powerful shot on goal during tournament game" />
+        <h3>Bracket Play & Championship Games</h3>
+        <p>Teams compete in divisions throughout the day, leading to exciting finals on Sunday afternoon. Watch intense face-offs, dodges, and goals!</p>
+        <img src="./img/laxteam.jpg" alt="Youth lacrosse team in a group huddle celebrating a big win with trophy" />
+        <h3>Awards & MVP Recognition</h3>
+        <p>Top performers get MVP awards, plus team trophies. Celebrate with photos and cheers after the games.</p>
+        <img src="./img/laxbags.jpg" alt="Close-up of a lacrosse stick cradling an orange ball on the field grass" />
+        <h3>Skills Challenges</h3>
+        <p>Test your stick skills in fun contests like fastest shot and accuracy — open to all participants and spectators to watch.</p>
+    </div>
+
+    <div id="location" class="revealable">
+        <h2>Event Location</h2>
+        <p><strong>Patch Reef Park</strong><br>
+        1075 SW 18th Street, Boca Raton, FL 33486</p>
+        
+        <!-- Reliable Google Maps Link + Preview Image -->
+        <a href="https://www.google.com/maps/place/Patch+Reef+Park/@26.345,-80.112,17z" 
+           target="_blank" 
+           style="text-decoration: none;">
+            <img src="./img/patchreef.jpg" 
+                 alt="Patch Reef Park - Event Location" 
+                 style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <p style="margin-top: 10px; color: #006600; font-weight: bold; text-align: center;">
+                📍 Click to Open Full Map in New Tab →
+            </p>
+        </a>
+    </div>
+    <!-- rsvp [PLACEHOLDER] [ADDED IN UNIT 6] -->
+    <div id="rsvp" class="revealable">
+        <h2>RSVP</h2>
+        <div class="rsvp-container">
+            <div class="rsvp-para">
+                <p>Ready to join the action at the Boca Lax Showdown? Sign up your team or as an individual player/spectator below! Spots are limited — secure yours now and be part of South Florida's premier youth lacrosse weekend.</p>
+            </div>
+            <div class="rsvp-participants">
+                <p>🎟️ Alex from Miami has RSVP'd.</p>
+                <p>🎟️ Jordan from Fort Lauderdale has RSVP'd.</p>
+                <p>🎟️ Taylor from West Palm Beach has RSVP'd.</p>
+            </div>
+        </div>
+
+
+        <!--- Sign RSVP Form --->
+        <div class="form-container">
+            <form id="rsvp-form" title="rsvp-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="phone">Phone (optional):</label>
+                <input type="tel" id="phone" name="phone">
+            </form>
+            <button id="rsvp-button">Submit RSVP</button>
+        </div>
+    </div>
+
+    
+    <div id="thanks-modal" class="modal">
+        <div class="modal-content">
+            <div id="modal-text-container">
+                <p id="thanks-modal-content">Thank you!</p>
+                <button id="close-modal-button">Close</button>
+            </div>
+            <img id="modal-image" src="./img/laxshowdownsunset.jpg" alt="Boca Lax Showdown Celebration">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
