@@ -1,0 +1,386 @@
+/*** VSCodeEDU preview fix ***/
+html {
+    background-color: var(--bg-color);
+}
+
+/*** body ***/
+body {
+    background-color: #f0f8ff; /* light blue for sporty/clean feel */
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    margin: 50px;
+    line-height: 1.6;
+    padding-top: 70px;
+}
+
+/*** Text ***/
+h1 {
+    color: #004080; /* deep lacrosse blue */
+    text-align: center;
+    font-size: 3.2em;
+    margin: 0.3em 0;
+}
+
+h2 {
+    color: #006600; /* green accent */
+    border-bottom: 2px solid #006600;
+    padding-bottom: 8px;
+    font-size: 2.4em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+h3 {
+    color: #333;
+    font-size: 1.7em;
+    margin: 1em 0 0.5em;
+}
+
+h4 {
+    color: #004080;
+    font-size: 1.4em;
+    margin: 1em 0 0.5em;
+}
+
+p {
+    font-size: 1.15em;
+    margin: 1em 0;
+    color: #333;
+}
+
+a,
+a * {
+    color: #004080;
+    text-decoration: none;
+}
+
+a:link    { color: #004080; }
+a:visited { color: #003366; }
+a:hover   { color: #ff6600; text-decoration: underline; }
+a:active  { color: #cc5200; }
+
+/*** header ***/
+.header {
+    padding: 20px;
+    padding-top: 100px;
+    margin-bottom: 75px;
+    text-align: center;
+    background-color: #e6f2ff;
+    border-radius: 12px;
+}
+
+#header-left {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#header-right {
+    width: 58%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 20px;
+}
+
+#header-img {
+    width: 250px;
+    max-width: 300px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border: 3px solid #004080;
+    border-radius: 12px;
+}
+
+.header-button {
+    background-color: #ff6600;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 14px 30px;
+    margin: 12px 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: #cc5200;
+}
+
+/* Fix all other images */
+img:not(#header-img) {
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: 3px solid #004080;
+    border-radius: 8px;
+}
+
+/*** Navigation bar (navbar) [PLACEHOLDER] ***/
+.navbar ul {
+    z-index: 1000;
+}
+
+/*** RSVP Section ***/
+.rsvp-container {
+    display: flex;
+    gap: 20px;
+}
+
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #e63946;
+  background-color: #ffebee;
+}
+
+/*** Animations  ***/
+.revealable {
+  --reveal-distance: 150px;
+
+  scroll-margin-top: var(--reveal-distance);
+  opacity: 0;
+  transition: all 2s ease;
+  position: relative;
+  transform: translateY(var(--reveal-distance));
+}
+
+.active {
+  scroll-margin-top: 0;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+.dark-mode .header {
+  background-color: #16213e;
+}
+
+.dark-mode h1, .dark-mode h2, .dark-mode h3 {
+  color: #ffffff;
+}
+
+.dark-mode .rsvp-participants p {
+  background-color: #0f3460;
+  color: #e0e0e0;
+}
+
+/* Navbar - horizontal across top */
+.navbar {
+    background-color: #004080;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #ff6600;
+}
+
+#theme-button {
+    background-color: #006600;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#theme-button:hover {
+    background-color: #004d00;
+}
+
+/* Dark mode improvements for text visibility */
+.dark-mode p {
+    color: #e0e0e0;        /* light gray - easy to read on dark background */
+}
+
+.dark-mode li {
+    color: #e0e0e0;
+}
+
+/*** Animations  ***
+  
+  Purpose:
+  - Add style rules to enable scroll animations for your website
+
+  When To Modify:
+  - [ ] Project 8 (REQUIRED FEATURE)
+  - [ ] Any time after
+***/
+
+.revealable {
+  --reveal-distance: 150px;
+
+  scroll-margin-top: var(--reveal-distance);
+  opacity: 0;
+  transition: all 2s ease;
+  position: relative;
+  transform: translateY(var(--reveal-distance));
+}
+
+.active {
+  scroll-margin-top: 0;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Reduce Motion - turns off animation */
+.reduce-motion .revealable {
+  transition: none;
+  opacity: 1;
+  transform: none;
+}
+
+/* Navbar layout - buttons on the right with spacing */
+.navbar {
+    background-color: #004080;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul li a:hover {
+    color: #ff6600;
+}
+
+/* Group the two buttons on the right */
+.navbar-buttons {
+    display: flex;
+    gap: 12px;   /* space between Dark Mode and Reduce Motion */
+}
+
+#theme-button,
+#reduce-motion-button {
+    background-color: #006600;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#theme-button:hover,
+#reduce-motion-button:hover {
+    background-color: #004d00;
+}
+
+
+/* ====================== UNIT 9 SUCCESS MODAL ====================== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #e6f2ff;
+  color: #004080;
+  text-align: center;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  max-width: 90%;           /* Responsive width */
+  width: 420px;             /* Max width on big screens */
+  max-height: 85vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#thanks-modal-content {
+  font-size: 1.65rem;
+  margin-bottom: 15px;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+#modal-image {
+  width: 170px;           /* Slightly adjusted for the new image */
+  height: auto;
+  border-radius: 12px;
+  margin: 15px 0;
+  max-width: 100%;
+}
+
+#close-modal-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+#close-modal-button:hover {
+  background-color: #cc5200;
+}
+
+/* Dark mode support */
+.dark-mode .modal-content {
+  background-color: #16213e;
+  color: #e0e0e0;
+}
